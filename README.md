@@ -2,6 +2,7 @@
 
 Интерактивный макет панели. Все цифры, разговоры и письма условные.
 
-Открыть: https://winchester-7.github.io/golden-dragon-dashboard/
+- Основная версия: https://winchester-7.github.io/golden-dragon-dashboard/
+- Новая версия на дизайне v28 (пока в запасе): https://winchester-7.github.io/golden-dragon-dashboard/new/
 
-Исходный код (React + Vite) лежит в папке `source/`. Первая версия макета сохранена в `v1/`.
+Исходный код новой версии (React + Vite) лежит в папке `source/`, её сборка в папке `new/`.
