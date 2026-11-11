@@ -35,13 +35,15 @@ html{scroll-behavior:smooth}</style>
 </div>
 </div>
 <nav aria-label="Разделы" style="display: flex; flex-wrap: wrap; gap: 6px">
-<button class="nav" onClick="{{go.home}}" style="{{nav.home}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><span>Главная</span></button>
-<button class="nav" onClick="{{go.list}}" style="{{nav.list}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M4 5h16v11H9l-5 4z"/></svg><span>Разговоры</span></button>
-<button class="nav" onClick="{{go.records}}" style="{{nav.records}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3"/></svg><span>Записи</span></button>
-<button class="nav" onClick="{{go.whatsapp}}" style="{{nav.whatsapp}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span>WhatsApp</span></button>
-<button class="nav" onClick="{{go.mail}}" style="{{nav.mail}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg><span>Почта</span></button>
-<button class="nav" onClick="{{go.booking}}" style="{{nav.booking}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"/></svg><span>Booking</span></button>
-<button class="nav" onClick="{{go.reports}}" style="{{nav.reports}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><span>Отчёты</span></button>
+<button class="nav" onClick="{{go.home}}" style="{{nav.home}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg><span style="flex: 1">Главная</span></button>
+<button class="nav" onClick="{{go.list}}" style="{{nav.list}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M4 5h16v11H9l-5 4z"/></svg><span style="flex: 1">Разговоры</span></button>
+<button class="nav" onClick="{{go.desk}}" style="{{nav.desk}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M16 11a4 4 0 1 0-8 0a4 4 0 0 0 8 0M4 21a8 8 0 0 1 16 0"/></svg><span style="flex: 1">Беседы</span></button>
+<button class="nav" onClick="{{go.bad}}" style="{{nav.bad}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 4l9 16H3zM12 10v4M12 17v.5"/></svg><span style="flex: 1">Проблемные</span><span style="flex: none; min-width: 22px; height: 22px; padding: 0 6px; box-sizing: border-box; border-radius: 999px; background: #B42318; color: #FFFFFF; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center">{{badCount}}</span></button>
+<button class="nav" onClick="{{go.records}}" style="{{nav.records}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11a7 7 0 0 0 14 0M12 18v3"/></svg><span style="flex: 1">Записи</span></button>
+<button class="nav" onClick="{{go.whatsapp}}" style="{{nav.whatsapp}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span style="flex: 1">WhatsApp</span></button>
+<button class="nav" onClick="{{go.mail}}" style="{{nav.mail}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M3 6h18v12H3zM3 7l9 7 9-7"/></svg><span style="flex: 1">Почта</span></button>
+<button class="nav" onClick="{{go.booking}}" style="{{nav.booking}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z"/></svg><span style="flex: 1">Booking</span></button>
+<button class="nav" onClick="{{go.reports}}" style="{{nav.reports}}"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><span style="flex: 1">Отчёты</span></button>
 </nav>
 <div style="margin-top: auto; border-radius: 16px; padding: 12px 14px; background: rgba(255,255,255,0.08); font-size: 12px; line-height: 1.45; color: #D9DCE3">Это макет. Цифры, разговоры и письма условные, чтобы показать, как будет выглядеть программа.</div>
 </aside>
@@ -239,6 +241,45 @@ html{scroll-behavior:smooth}</style>
 <span style="font-size: 14px; font-weight: 700; color: #7A5212">Разбор и запись</span>
 </button>
 </sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{isTalks}}" hint-placeholder-val="{{false}}">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<div style="background: #FFFFFF; border-radius: 22px; padding: 22px; box-shadow: 0 1px 2px rgba(20,23,31,0.05), 0 12px 32px rgba(20,23,31,0.06); box-sizing: border-box; padding: 16px 22px; display: flex; flex-wrap: wrap; align-items: center; gap: 18px; animation: rise 0.6s cubic-bezier(0.2,0.7,0.2,1) backwards">
+<sc-for list="{{talkStats}}" as="h" hint-placeholder-count="3">
+<div style="display: flex; align-items: baseline; gap: 8px">
+<b style="font-family: Manrope, sans-serif; font-size: 26px; color: {{h.color}}; font-variant-numeric: tabular-nums">{{h.value}}</b>
+<span style="font-size: 13px; line-height: 1.4; color: #5B606B">{{h.label}}</span>
+</div>
+</sc-for>
+</div>
+<sc-for list="{{talks}}" as="c" hint-placeholder-count="4">
+<div style="background: #FFFFFF; border-radius: 22px; padding: 22px; box-shadow: 0 1px 2px rgba(20,23,31,0.05), 0 12px 32px rgba(20,23,31,0.06); box-sizing: border-box; display: flex; flex-direction: column; gap: 14px; animation: rise 0.6s cubic-bezier(0.2,0.7,0.2,1) backwards; animation-delay: {{c.delay}}">
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px">
+<span style="{{c.badgeStyle}}">{{c.score}}</span>
+<div style="flex: 999 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 5px">
+<span style="font-size: 13px; line-height: 1.4; color: #5B606B">{{c.time}} · {{c.where}} · {{c.admin}}</span>
+<span style="font-size: 16px; line-height: 1.45">{{c.summary}}</span>
+<span style="font-size: 13px; font-weight: 700; color: #A0201A">{{c.flagText}}</span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px">
+<div style="display: flex; align-items: center; gap: 12px; flex: 999 1 280px; min-width: 0">
+<button class="lift" onClick="{{c.toggle}}" aria-label="Слушать запись" style="flex: none; width: 48px; height: 48px; border-radius: 999px; border: 0; background: #16181D; color: #FFFFFF; cursor: pointer; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{c.isPlaying}}" hint-placeholder-val="{{false}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></sc-if>
+<sc-if value="{{c.isPaused}}" hint-placeholder-val="{{true}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></sc-if>
+</button>
+<div style="flex: 1; min-width: 0; height: 44px; display: flex; align-items: center; gap: 2px; overflow: hidden">
+<sc-for list="{{c.wave}}" as="w" hint-placeholder-count="40"><span style="{{w.style}}"></span></sc-for>
+</div>
+<span style="flex: none; font-size: 13px; font-weight: 600; color: #5B606B; font-variant-numeric: tabular-nums">{{c.clock}}</span>
+</div>
+<button onClick="{{c.open}}" style="min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid #D9D4C8; background: #FFFFFF; color: #16181D; font-size: 14px; font-weight: 600; cursor: pointer">Разбор ИИ</button>
+</div>
+</div>
+</sc-for>
+<span style="font-size: 13px; line-height: 1.4; color: #5B606B">В макете звука нет: кнопка показывает, как будет идти прослушивание.</span>
 </div>
 </sc-if>
 
@@ -653,6 +694,20 @@ class Component extends DCLogic {
         todo: 'Узнать у гостя из 401, стало ли тише.',
         advice: 'После каждой жалобы перезванивать гостю и сообщать, что сделано.',
         dialog: [['guest', 'Соседи очень шумят.'], ['admin', 'Извините, сейчас разберёмся.']] },
+      { id: 'c8', time: '12:15', kind: 'desk', place: 'У стойки', admin: 'Айгерим', score: 8, dur: '2:40', mood: 'доволен',
+        summary: 'Гость попросил продлить проживание на сутки: быстро проверила наличие и оформила.',
+        flags: [],
+        crit: [['Приветствие', 8, 'Поздоровалась с улыбкой.'], ['Вежливость', 9, 'Внимательно выслушала.'], ['Решение вопроса', 9, 'Продление оформлено за две минуты.'], ['Допродажа', 6, 'Не предложила ужин в ресторане.']],
+        todo: 'Ничего не требуется.',
+        advice: 'При продлении предлагать ужин или спа со скидкой.',
+        dialog: [['guest', 'Хочу остаться ещё на одну ночь, можно?'], ['admin', 'Сейчас проверю. Да, ваш номер свободен, продлеваю до четверга.'], ['guest', 'Отлично, спасибо.']] },
+      { id: 'c9', time: '17:05', kind: 'desk', place: 'У стойки', admin: 'Бакыт', score: 5, dur: '3:25', mood: 'недоволен',
+        summary: 'Гость пожаловался на холод в номере 207: пообещал обогреватель, но не сказал когда.',
+        flags: ['Жалоба', 'Нет срока'],
+        crit: [['Приветствие', 7, 'Поздоровался.'], ['Вежливость', 7, 'Извинился за неудобство.'], ['Решение вопроса', 4, 'Обогреватель пообещал, срок не назвал.'], ['Обратная связь', 3, 'Не проверил, принесли ли обогреватель.']],
+        todo: 'Проверить, принесли ли обогреватель в 207, и сообщить гостю.',
+        advice: 'Называть точное время и предлагать замену номера, если проблему нельзя решить быстро.',
+        dialog: [['guest', 'В 207 очень холодно, батареи еле тёплые.'], ['admin', 'Извините, я скажу технику, вам принесут обогреватель.'], ['guest', 'А когда?'], ['admin', 'Скоро.']] },
       { id: 'c7', time: '20:15', kind: 'desk', place: 'У стойки', admin: 'Бакыт', score: 9, dur: '3:10', mood: 'доволен',
         summary: 'Гость спросил про ресторан рядом и получил три варианта с картой.',
         flags: [],
@@ -686,6 +741,7 @@ class Component extends DCLogic {
       }
       return Object.assign({}, c, {
         kindLabel: c.kind === 'call' ? 'Звонок' : 'У стойки',
+        where: c.kind === 'call' ? 'Звонок · ' + c.place : 'Беседа у стойки',
         badgeStyle: self.badge(c.score, false),
         bigBadgeStyle: self.badge(c.score, true),
         flagText: c.flags.join(' · '),
@@ -706,13 +762,15 @@ class Component extends DCLogic {
       var on = cur === key;
       return 'flex: 1 1 110px; min-height: 46px; padding: 0 12px; border: 0; border-radius: 14px; cursor: pointer; display: flex; align-items: center; gap: 10px; text-align: left; font-size: 14px; font-weight: 600; ' + (on ? 'background: #FFFFFF; color: #16181D' : 'background: transparent; color: #E6E1D6');
     };
-    var keys = ['home', 'list', 'records', 'whatsapp', 'mail', 'booking', 'reports'];
+    var keys = ['home', 'list', 'desk', 'bad', 'records', 'whatsapp', 'mail', 'booking', 'reports'];
     var nav = {}, go = {};
     keys.forEach(function (k) { nav[k] = navStyle(k); go[k] = goTab(k, { filter: 'all' }); });
     var titles = {
       home: ['Как работал ресепшен вчера', 'Вторник, 10 ноября. Всё главное на одном экране.'],
       list: ['Разговоры с гостями', 'Каждый звонок и беседа у стойки с оценкой ИИ. Нажмите на разговор, чтобы увидеть разбор.'],
       detail: ['Разбор разговора', 'Оценка ИИ, запись, текст и что нужно сделать.'],
+      desk: ['Беседы у стойки', 'Разговоры администраторов с гостями лицом к лицу. Каждую можно прослушать.'],
+      bad: ['Проблемные разговоры', 'Жалобы, грубость и нерешённые просьбы. Собраны отдельно, чтобы ничего не пропустить.'],
       records: ['Записи разговоров', 'Все записи за день. Нажмите на кнопку, чтобы прослушать.'],
       whatsapp: ['WhatsApp и служебный телефон', 'Как быстро и как вежливо отвечают гостям в переписке.'],
       mail: ['Почта Outlook', 'Сводка ИИ по письмам гостей и ответам администраторов.'],
@@ -729,6 +787,19 @@ class Component extends DCLogic {
       if (st.filter === 'bad') return c.flags.length > 0;
       return c.kind === st.filter;
     });
+    var badAll = data.filter(function (c) { return c.flags.length > 0; });
+    var talks = st.tab === 'bad' ? badAll : data.filter(function (c) { return c.kind === 'desk'; });
+    var tAvg = talks.reduce(function (a, c) { return a + c.score; }, 0) / talks.length;
+    var tBad = talks.filter(function (c) { return c.flags.length > 0; }).length;
+    var talkStats = st.tab === 'bad' ? [
+      { value: n0(badAll.length), label: 'проблемных разговоров за день', color: '#A0201A' },
+      { value: n0(badAll.filter(function (c) { return c.kind === 'call'; }).length), label: 'звонки из номеров', color: '#16181D' },
+      { value: n0(badAll.filter(function (c) { return c.kind === 'desk'; }).length), label: 'беседы у стойки', color: '#16181D' }
+    ] : [
+      { value: n0(talks.length), label: 'бесед в примере (за день их 17)', color: '#16181D' },
+      { value: n1(tAvg), label: 'средняя оценка', color: '#1B6B43' },
+      { value: n0(tBad), label: 'с проблемами', color: '#A0201A' }
+    ];
     var s = data.filter(function (c) { return c.id === st.sel; })[0] || data[0];
     var sel = Object.assign({}, s, {
       crit: s.crit.map(function (r) { return { name: r[0], score: r[1], comment: r[2], w: pct(r[1] * 10), color: self.barColor(r[1]) }; }),
@@ -762,7 +833,11 @@ class Component extends DCLogic {
       accent: accent,
       nav: nav,
       go: go,
-      goBad: goTab('list', { filter: 'bad' }),
+      goBad: go.bad,
+      badCount: badAll.length,
+      isTalks: st.tab === 'desk' || st.tab === 'bad',
+      talks: talks,
+      talkStats: talkStats,
       title: titles[st.tab][0],
       subtitle: titles[st.tab][1],
       isHome: st.tab === 'home',
@@ -773,7 +848,7 @@ class Component extends DCLogic {
       isMail: st.tab === 'mail',
       isBk: st.tab === 'booking',
       isReports: st.tab === 'reports',
-      back: goTab(st.from === 'records' ? 'records' : (st.from === 'home' ? 'home' : 'list'), { play: null, pos: 0 }),
+      back: goTab(titles[st.from] && st.from !== 'detail' ? st.from : 'list', { play: null, pos: 0 }),
       avg: n1(7.8),
       heroRing: ring(0.78, 164, accent, 'rgba(255,255,255,0.14)'),
       heroStats: [
@@ -787,7 +862,7 @@ class Component extends DCLogic {
         { label: 'Довольных гостей', num: 81, unit: '%', sub: 'по тону разговора', color: '#1B6B43' },
         { label: 'Жалоб за день', num: 4, sub: 'на 1 больше, чем позавчера', color: '#A0201A' }
       ]),
-      attention: data.filter(function (c) { return c.score < 6; }),
+      attention: data.filter(function (c) { return c.score < 5 || c.id === 'c6'; }),
       channels: withBadge([
         { name: 'Звонки и стойка', score: '7.8', text: '48 разговоров. Слабое место: гостям не перезванивают после жалоб.', go: go.list },
         { name: 'WhatsApp', score: '7.1', text: '23 переписки. Два гостя ждали ответа дольше 30 минут.', go: go.whatsapp },
