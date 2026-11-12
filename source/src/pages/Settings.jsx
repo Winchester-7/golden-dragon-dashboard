@@ -1,5 +1,6 @@
 import Icon from '../components/Icon'
-import { CardHead, PageHead, Segmented, Toggle } from '../components/kit'
+import { CardHead, PageHead, Pill, Segmented, Toggle } from '../components/kit'
+import { SHIFT_KIND, STAFF } from '../data/shifts'
 import { useApp } from '../lib/store'
 import { useShared } from '../lib/shared'
 
@@ -11,13 +12,14 @@ const SIZES = [
 const ALERTS = [
   { id: 'bad', label: 'Грубость и жалобы', text: 'Сразу писать в Telegram, если оценка разговора ниже 5.' },
   { id: 'open', label: 'Нерешённые просьбы', text: 'Напоминать, если гостю не перезвонили.' },
-  { id: 'daily', label: 'Утренняя сводка', text: 'Каждый день в 8:00 присылать итог вчерашнего дня.' },
+  { id: 'daily', label: 'Отчёт за смену', text: 'В 08:00 и в 20:00, при пересменке: кто работал и как справился.' },
+  { id: 'late', label: 'Администратор не пришёл', text: 'Сообщать, если камера не увидела сотрудника через 15 минут после начала смены.' },
   { id: 'mail', label: 'Письма без ответа', text: 'Сообщать о письмах, на которые не ответили за 4 часа.' },
 ]
 
 export default function Settings() {
   const { prefs, replayIntro, toast } = useApp()
-  const [alerts, setAlerts] = useShared('settings.alerts', { bad: true, open: true, daily: true, mail: false })
+  const [alerts, setAlerts] = useShared('settings.alerts', { bad: true, open: true, daily: true, late: true, mail: false })
 
   return (
     <div className="page">
@@ -76,6 +78,29 @@ export default function Settings() {
           </ul>
         </section>
       </div>
+      <section className="card card-pad card-in" style={{ '--d': 2 }}>
+        <CardHead title="Смены и камера" sub="Кто работал, определяется по камере над ресепшеном" icon="camera" />
+        <ul className="set-list">
+          {Object.values(SHIFT_KIND).map((k, i) => (
+            <li key={k.label} className="rv" style={{ '--i': i }}>
+              <div>
+                <b>{k.label}</b>
+                <span>Администратор работает 12 часов. Отчёт ИИ готов в {k.to}.</span>
+              </div>
+              <Pill tone="teal" dot={false}>
+                {k.hours}
+              </Pill>
+            </li>
+          ))}
+          <li className="rv" style={{ '--i': 2 }}>
+            <div>
+              <b>Распознавание сотрудников</b>
+              <span>Узнаются только администраторы, чьи фото загружены: {STAFF.map((p) => p.name).join(', ')}. Лица гостей не сохраняются.</span>
+            </div>
+            <Pill tone="green">Включено</Pill>
+          </li>
+        </ul>
+      </section>
       <p className="mock-note">Это макет. Цифры, разговоры и письма условные, чтобы показать, как будет выглядеть программа.</p>
     </div>
   )

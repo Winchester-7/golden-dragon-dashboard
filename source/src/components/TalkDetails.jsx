@@ -43,7 +43,7 @@ export default function TalkDetails({ talk: t, close }) {
 
         <section className="talk-sec">
           <h4>Оценка по правилам</h4>
-          <HBars items={crit} format={(v) => `${v} из 10`} />
+          <HBars items={crit} format={(v) => `${v} из 10`} max={10} />
           <ul className="talk-crit">
             {crit.map((c) => (
               <li key={c.label}>

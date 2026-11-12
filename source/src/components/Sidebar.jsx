@@ -181,7 +181,7 @@ export default function Sidebar({ collapsed, canCollapse, onToggle, active, onNa
                 </div>
               </div>
               <button className="menu-item" role="menuitem" onClick={() => go('reports')}>
-                <Icon name="report" /> Утренние отчёты
+                <Icon name="report" /> Отчёты за смену
               </button>
               <button className="menu-item" role="menuitem" onClick={() => go('settings')}>
                 <Icon name="settings" /> Настройки

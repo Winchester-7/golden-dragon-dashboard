@@ -10,7 +10,7 @@ import DealFlow from '../components/DealFlow'
 import SearchBox from '../components/SearchBox'
 import Icon, { Logo } from '../components/Icon'
 import { useApp } from '../lib/store'
-import { CHANNELS, HOTEL, TALKS } from '../data/hotel'
+import { CHANNELS, TALKS } from '../data/hotel'
 
 /** Карточка-папка для разговора: те же поля, что у исходной карточки шаблона. */
 const asCard = (id, status, tone) => {
@@ -57,7 +57,7 @@ export default function Dashboard() {
             <span className="ws-logo">
               <Logo />
             </span>
-            Отчёт за {HOTEL.day}
+            Отчёт за смену
             <Icon name="arrowRight" />
           </button>
           <button className="peek" onClick={() => openTalk('c6')} aria-label="Открыть разговор: номер 401">

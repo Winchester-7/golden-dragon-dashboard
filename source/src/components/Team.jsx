@@ -2,6 +2,8 @@ import { Avatar } from './ui'
 import { useCountUp } from '../lib/hooks'
 import { useEnter } from '../lib/ui'
 import { TEAM } from '../data/hotel'
+import { liveShift, shiftNames } from '../data/shifts'
+import { useApp } from '../lib/store'
 
 const R = 19.5
 const C = 2 * Math.PI * R
@@ -31,7 +33,7 @@ function Member({ m, i }) {
         <strong>{m.name}</strong>
         <span>{m.role}</span>
         <em>
-          {m.done} разговоров за день. {m.note}
+          {m.done} разговоров за месяц. {m.note}
         </em>
       </div>
     </div>
@@ -39,10 +41,15 @@ function Member({ m, i }) {
 }
 
 export default function Team() {
+  const { go } = useApp()
   return (
     <section className="team sect rise" id="sec-team" style={{ '--d': 4 }}>
       <div className="sec-head">
         <h2 className="sec-title">Администраторы</h2>
+        <button type="button" className="onshift-chip" onClick={() => go('shifts')}>
+          <i />
+          На смене: {shiftNames(liveShift)}
+        </button>
       </div>
       <div className="card team-card">
         {TEAM.map((m, i) => (

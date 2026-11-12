@@ -565,9 +565,9 @@ export function BarChart({ labels, series, height = '12rem', format = (v) => `$$
 }
 
 /** Horizontal rounded bars, for rankings. items: [{ label, value, color?, sub? }] */
-export function HBars({ items, format = (v) => `$${compact(v)}`, d = 0, color = 'var(--green)' }) {
+export function HBars({ items, format = (v) => `$${compact(v)}`, d = 0, color = 'var(--green)', max: fixedMax }) {
   const delay = useEnter(d, 100)
-  const max = Math.max(...items.map((i) => i.value), 1)
+  const max = fixedMax ?? Math.max(...items.map((i) => i.value), 1)
   return (
     <ul className="hbars">
       {items.map((it, i) => (

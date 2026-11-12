@@ -1,8 +1,13 @@
 # Golden Dragon: дашборд ИИ-анализа ресепшена (макет)
 
-Интерактивный макет панели. Все цифры, разговоры и письма условные.
+Интерактивные макеты панели. Все цифры, имена, разговоры и отметки камеры условные.
 
-- Основная версия: https://winchester-7.github.io/golden-dragon-dashboard/
-- Новая версия на дизайне v28 (пока в запасе): https://winchester-7.github.io/golden-dragon-dashboard/new/
+Во всех трёх вариантах есть: смены администраторов (день 08:00–20:00, ночь 20:00–08:00),
+кто сейчас на смене, оценка ИИ по каждому администратору и отчёт после каждой смены.
 
-Исходный код новой версии (React + Vite) лежит в папке `source/`, её сборка в папке `new/`.
+- Вариант 1 (основной): https://winchester-7.github.io/golden-dragon-dashboard/
+- Вариант 2, дизайн v28 (в запасе): https://winchester-7.github.io/golden-dragon-dashboard/new/
+- Вариант 3, дизайн v21: https://winchester-7.github.io/golden-dragon-dashboard/v3/
+
+Исходный код (React + Vite): `source/` для варианта 2 (сборка в `new/`),
+`source-v3/` для варианта 3 (сборка в `v3/`).

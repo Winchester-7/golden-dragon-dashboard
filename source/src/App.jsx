@@ -3,6 +3,7 @@ import Sidebar from './components/Sidebar'
 import Boot from './components/Boot'
 import CommandPalette from './components/CommandPalette'
 import TalkDetails from './components/TalkDetails'
+import ShiftDetails from './components/ShiftDetails'
 import { Logo } from './components/Icon'
 import { Drawer, FormModal } from './components/kit'
 import { Modal, Toasts } from './components/ui'
@@ -10,6 +11,7 @@ import { AppContext, IntroContext, uid } from './lib/store'
 import { useMedia, useStored } from './lib/hooks'
 import { BOOT_BASE, BOOT_MS, prefersReduced } from './lib/motion'
 import { CHATS, MAILS, ME, PAGES, TALKS, isBad, seedTasks } from './data/hotel'
+import { shiftById } from './data/shifts'
 
 import Dashboard from './pages/Dashboard'
 import TalksPage from './pages/TalksPage'
@@ -18,6 +20,7 @@ import WhatsApp from './pages/WhatsApp'
 import MailPage from './pages/MailPage'
 import Booking from './pages/Booking'
 import Reports from './pages/Reports'
+import Shifts from './pages/Shifts'
 import Settings from './pages/Settings'
 
 const AllTalks = () => <TalksPage mode="all" />
@@ -27,6 +30,7 @@ const Problems = () => <TalksPage mode="bad" />
 /** One page per sidebar tab. */
 const ROUTES = {
   dashboard: Dashboard,
+  shifts: Shifts,
   reports: Reports,
   talks: AllTalks,
   desk: DeskTalks,
@@ -130,6 +134,7 @@ export default function App() {
   const [tasks, setTasks] = useState(seedTasks)
   const [selected, setSelected] = useState('calls')
   const [openTalkId, setOpenTalkId] = useState(null)
+  const [openShiftId, setOpenShiftId] = useState(null)
   const [playing, setPlaying] = useState(null)
   const [shared, setShared] = useState({})
 
@@ -175,6 +180,7 @@ export default function App() {
       selected,
       setSelected,
       openTalk: setOpenTalkId,
+      openShift: setOpenShiftId,
       playing,
       setPlaying,
       shared,
@@ -241,6 +247,12 @@ export default function App() {
           }}
         >
           {(close) => <TalkDetails talk={TALKS.find((t) => t.id === openTalkId)} close={close} />}
+        </Drawer>
+      )}
+
+      {openShiftId && (
+        <Drawer label="Отчёт за смену" width="38rem" onClose={() => setOpenShiftId(null)}>
+          {(close) => <ShiftDetails shift={shiftById(openShiftId)} close={close} />}
         </Drawer>
       )}
 
