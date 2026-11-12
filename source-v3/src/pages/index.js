@@ -3,6 +3,7 @@ import Calendar from './Calendar';
 import Camera from './Camera';
 import Channel from './Channel';
 import Dashboard from './Dashboard';
+import Phone from './Phone';
 import Reports from './Reports';
 import Settings from './Settings';
 import Shifts from './Shifts';
@@ -13,6 +14,7 @@ export const PAGES = {
   dashboard: Dashboard,
   shifts: Shifts,
   camera: Camera,
+  phone: Phone,
   talks: Talks,
   analytics: Analytics,
   calendar: Calendar,

@@ -12,6 +12,7 @@ export const TABS = [
 
 export const HOME_LINKS = [
   { id: 'reports', label: 'Отчёты за смену', icon: 'statement' },
+  { id: 'phone', label: 'Служебный телефон', icon: 'phone' },
   { id: 'settings', label: 'Настройки', icon: 'settings' },
 ];
 

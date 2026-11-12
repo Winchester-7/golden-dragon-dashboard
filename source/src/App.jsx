@@ -22,6 +22,7 @@ import Booking from './pages/Booking'
 import Reports from './pages/Reports'
 import Shifts from './pages/Shifts'
 import Camera from './pages/Camera'
+import Phone from './pages/Phone'
 import Settings from './pages/Settings'
 
 const AllTalks = () => <TalksPage mode="all" />
@@ -33,6 +34,7 @@ const ROUTES = {
   dashboard: Dashboard,
   shifts: Shifts,
   camera: Camera,
+  phone: Phone,
   reports: Reports,
   talks: AllTalks,
   desk: DeskTalks,

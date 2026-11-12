@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import emblem from './assets/gd-emblem.png'
 import LiveCamera from './components/LiveCamera'
-import { TALKS, isBad, talkWhere } from './data/hotel'
+import PhoneHub from './components/PhoneHub'
+import { CHATS, TALKS, isBad, talkWhere } from './data/hotel'
 import {
   CAMERA_LOG, CRIT_LABELS, NOW, SHIFT_KIND, SHIFTS, STAFF, WEEKS,
   fmtScore, grade, gradeTone, lastShift, liveShift, rota, shiftNames, shiftTitle,
@@ -12,6 +13,7 @@ const PATHS = {
   home: 'M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z',
   shifts: 'M12 21a9 9 0 1 0 0-18a9 9 0 0 0 0 18M12 7v5l3 2',
   talks: 'M4 5h16v11H9l-5 4z',
+  desk: 'M16 11a4 4 0 1 0-8 0a4 4 0 0 0 8 0M4 21a8 8 0 0 1 16 0',
   camera: 'M15 10l5-3v10l-5-3zM3 6h12v12H3z',
   reports: 'M5 20V10M12 20V4M19 20v-7',
   sun: 'M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4',
@@ -21,7 +23,6 @@ const PATHS = {
   right: 'M9 6l6 6-6 6',
   close: 'M6 6l12 12M18 6L6 18',
   phone: 'M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2z',
-  desk: 'M16 11a4 4 0 1 0-8 0a4 4 0 0 0 8 0M4 21a8 8 0 0 1 16 0',
   smile: 'M12 21a9 9 0 1 0 0-18a9 9 0 0 0 0 18M8.5 14.5a4.5 4.5 0 0 0 7 0M9 9.5v.5M15 9.5v.5',
   alert: 'M12 4l9 16H3zM12 10v4M12 17v.5',
   star: 'M12 3l2.7 5.6 6.1.8-4.5 4.3 1.1 6.1L12 16.9 6.6 19.8l1.1-6.1L3.2 9.4l6.1-.8z',
@@ -37,6 +38,7 @@ const NAV = [
   { id: 'shifts', label: 'Смены' },
   { id: 'camera', label: 'Камера' },
   { id: 'talks', label: 'Разговоры' },
+  { id: 'phone', label: 'Телефон' },
   { id: 'reports', label: 'Отчёты' },
 ]
 const TASKS = [
@@ -370,6 +372,7 @@ const TITLES = {
   home: ['Добрый вечер, руководитель', `${NOW.date}, ${NOW.time}. Ночная смена идёт ${NOW.elapsedMin} минут.`],
   shifts: ['Смены и администраторы', 'Кто работал, как справился и что сказал ИИ.'],
   camera: ['Камера ресепшена', 'Прямой эфир с веб-камеры у стойки.'],
+  phone: ['Служебный телефон', 'Звонки с SIM, звонки и переписки WhatsApp. ИИ всё записывает и делает выводы.'],
   talks: ['Разговоры с гостями', 'Нажмите на разговор, чтобы увидеть разбор ИИ.'],
   reports: ['Отчёты', 'Отчёт выходит при пересменке.'],
 }
@@ -420,6 +423,7 @@ export default function App() {
           {page === 'shifts' && <Shifts {...api} />}
           {page === 'camera' && <LiveCamera staff={shiftNames(liveShift)} />}
           {page === 'talks' && <Talks {...api} />}
+          {page === 'phone' && <PhoneHub chats={CHATS} />}
           {page === 'reports' && <Reports {...api} />}
           <p className="g-foot">Это макет. Имена, оценки, разговоры и отметки камеры условные.</p>
         </main>

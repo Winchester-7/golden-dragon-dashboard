@@ -104,6 +104,7 @@ export const MENU = [
   {
     group: 'Каналы',
     items: [
+      { id: 'phone', label: 'Телефон', icon: 'phone' },
       { id: 'whatsapp', label: 'WhatsApp', icon: 'smartphone', badge: 'wa' },
       { id: 'mail', label: 'Почта', icon: 'mail', badge: 'mail', hot: true },
       { id: 'booking', label: 'Booking', icon: 'star' },

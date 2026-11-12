@@ -959,3 +959,8 @@
   --lc-accent-app: var(--green, #58a961);
   font-size: 1rem;
 }
+
+.ph {
+  --ph-accent-app: var(--green, #58a961);
+  font-size: 1rem;
+}

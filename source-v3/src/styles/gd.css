@@ -407,3 +407,7 @@ body {
 .lc {
   --lc-accent-app: var(--blue, #2f6bff);
 }
+
+.ph {
+  --ph-accent-app: var(--blue, #2f6bff);
+}

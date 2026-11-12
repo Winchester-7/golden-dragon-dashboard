@@ -1042,3 +1042,11 @@ button.g-row:hover {
     stroke-dashoffset: 0;
   }
 }
+
+.ph {
+  --ph-accent-app: var(--orange);
+  --ph-note-app: var(--text-soft);
+}
+.g-nav {
+  gap: 8px;
+}
