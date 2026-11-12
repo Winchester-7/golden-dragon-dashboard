@@ -6,7 +6,7 @@ import { uid } from '../lib/format';
 const AppContext = createContext(null);
 export const useApp = () => useContext(AppContext);
 
-export const PAGE_IDS = ['dashboard', 'shifts', 'talks', 'analytics', 'calendar', 'reports', 'settings', 'channel'];
+export const PAGE_IDS = ['dashboard', 'shifts', 'camera', 'talks', 'analytics', 'calendar', 'reports', 'settings', 'channel'];
 
 /* "#/channel/mail" → { view: 'channel', param: 'mail' } */
 const readHash = () => {

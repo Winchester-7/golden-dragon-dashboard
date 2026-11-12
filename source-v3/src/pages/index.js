@@ -1,5 +1,6 @@
 import Analytics from './Analytics';
 import Calendar from './Calendar';
+import Camera from './Camera';
 import Channel from './Channel';
 import Dashboard from './Dashboard';
 import Reports from './Reports';
@@ -11,6 +12,7 @@ import Talks from './Talks';
 export const PAGES = {
   dashboard: Dashboard,
   shifts: Shifts,
+  camera: Camera,
   talks: Talks,
   analytics: Analytics,
   calendar: Calendar,

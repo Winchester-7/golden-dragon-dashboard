@@ -88,6 +88,7 @@ export const MENU = [
     items: [
       { id: 'dashboard', label: 'Главная', icon: 'dashboard' },
       { id: 'shifts', label: 'Смены', icon: 'users' },
+      { id: 'camera', label: 'Камера', icon: 'camera' },
       { id: 'reports', label: 'Отчёты за смену', icon: 'report' },
     ],
   },

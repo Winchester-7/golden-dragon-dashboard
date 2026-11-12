@@ -4,6 +4,7 @@ export const USER = { first: 'Руководитель', name: 'Руководи
 export const TABS = [
   { id: 'dashboard', label: 'Сводка' },
   { id: 'shifts', label: 'Смены' },
+  { id: 'camera', label: 'Камера' },
   { id: 'talks', label: 'Разговоры' },
   { id: 'analytics', label: 'Аналитика' },
   { id: 'calendar', label: 'График' },

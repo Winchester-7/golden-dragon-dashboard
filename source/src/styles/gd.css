@@ -944,3 +944,18 @@
 .gd-logo img {
   filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.18));
 }
+
+/* ---- На весь экран, без боковых отступов ---- */
+.app {
+  padding: 0;
+}
+.frame {
+  max-width: none;
+  min-height: 100vh;
+  min-height: 100dvh;
+  border-radius: 0;
+}
+.lc {
+  --lc-accent-app: var(--green, #58a961);
+  font-size: 1rem;
+}

@@ -21,6 +21,7 @@ import MailPage from './pages/MailPage'
 import Booking from './pages/Booking'
 import Reports from './pages/Reports'
 import Shifts from './pages/Shifts'
+import Camera from './pages/Camera'
 import Settings from './pages/Settings'
 
 const AllTalks = () => <TalksPage mode="all" />
@@ -31,6 +32,7 @@ const Problems = () => <TalksPage mode="bad" />
 const ROUTES = {
   dashboard: Dashboard,
   shifts: Shifts,
+  camera: Camera,
   reports: Reports,
   talks: AllTalks,
   desk: DeskTalks,

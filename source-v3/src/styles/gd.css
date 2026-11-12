@@ -395,3 +395,15 @@ body {
   padding-inline: 5px;
   letter-spacing: -0.01em;
 }
+
+/* ---- На весь экран, без боковых отступов ---- */
+.shell {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0;
+  border-radius: 0;
+}
+.lc {
+  --lc-accent-app: var(--blue, #2f6bff);
+}
