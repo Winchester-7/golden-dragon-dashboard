@@ -411,3 +411,15 @@ body {
 .ph {
   --ph-accent-app: var(--blue, #2f6bff);
 }
+
+/* ---- Шапка при прокрутке: сплошной фон на всю ширину, содержимое не просвечивает ---- */
+.top::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: -40px;
+  bottom: -10px;
+  left: -100vw;
+  right: -100vw;
+  background: var(--frame);
+}

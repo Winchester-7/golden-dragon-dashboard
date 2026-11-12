@@ -1050,3 +1050,13 @@ button.g-row:hover {
 .g-nav {
   gap: 8px;
 }
+
+/* ---- Телефон: нижнее меню непрозрачное, текст под ним не просвечивает ---- */
+@media (max-width: 700px) {
+  .g-side {
+    background: rgb(24 26 33 / 0.96);
+  }
+  .g-view.is-light .g-side {
+    background: rgb(255 255 255 / 0.96);
+  }
+}

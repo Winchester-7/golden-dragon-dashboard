@@ -964,3 +964,12 @@
   --ph-accent-app: var(--green, #58a961);
   font-size: 1rem;
 }
+
+/* ---- Меню остаётся на месте при прокрутке ---- */
+.side {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100vh;
+  height: 100dvh;
+}
